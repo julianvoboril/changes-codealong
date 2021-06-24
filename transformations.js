@@ -1,6 +1,8 @@
 // Codealong: Data Sorting and Filtering in Node.js
 export function sortBySubscriptionDate(input) {
-  return input;
+  return input.sort(
+    (a, b) => new Date(a.subscribeDate) - new Date(b.subscribeDate),
+  );
 }
 
 export function sortByFirstName(input) {
@@ -8,7 +10,7 @@ export function sortByFirstName(input) {
 }
 
 export function filterToFirstNameStartingWithB(input) {
-  return input;
+  return input.filter((user) => user['First Name'].startsWith('B'));
 }
 
 export function filterToCreatedAfter2010(input) {
